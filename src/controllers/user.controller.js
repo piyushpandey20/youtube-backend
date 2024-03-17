@@ -81,7 +81,7 @@ const registerUser = asyncHandler(async (req, res) => {
         coverImage: coverImage?.url || "",
         email,
         password,
-        username: username.toLowerCase()
+        username: username
     })
 
     const createdUser = await User.findById(user._id).select(
